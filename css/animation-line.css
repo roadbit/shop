@@ -1,0 +1,35 @@
+.animationn__line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 30px;
+    background-color: #121113;
+    font-family: var(--font-plex);
+    font-size: 12px;
+    font-weight: 200;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.animationn__line div {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    animation: animationn__line 45s linear infinite;
+}
+.animationn__line h1 {
+    white-space: nowrap;
+    margin-right: 5px;
+    width: 100%;
+}
+@keyframes animationn__line {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../icon/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../css/simplebar.css">
+    <link rel="stylesheet" href="../../../../page/page.css">
+    <link rel="stylesheet" href="../../../css/animation-line.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>UPTONNN | Купити Мікрофон Петличний Бездротовий XO MKF08B Lightning</title>
+</head>
+<body>
+
+    <div class="main__container">
+        <div class="animationn__line">
+            <div>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+            </div>
+        </div>
+        <div class="nav__panel">
+            <div class="top__panel">
+                <a href="../../../index.html" class="logo__link">UPTONNN</a>
+                <div class="cart__item">
+                    <button class="cart__btn" onclick="toggleSidebar()">
+                        <img src="../../../icon/cart-contents.svg" alt="Cart" class="cart__icon">
+                    </button>
+                    <span class="cart__quantity">0</span>
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <div class="top__bar">
+                        <p class="bar__title">кошик</p>
+                        <button class="close-btn" onclick="closeSidebar()">
+                            <img src="../../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+
+                    <div class="cart__image-item">
+                        <img src="../../../icon/shopping-cart.svg" alt="img" class="cart__img-img">
+                        <p>кошик порожній</p>
+                    </div>
+
+                    <div class="cart__grid">
+                        <div class="contact__item">
+                            <p class="cart__info-text">1. Контактні дані</p>
+                            <form class="contact__form" id="orderForm" method="post">
+                                <input type="text" id="name" name="Ім'я" placeholder="Введіть ім'я"><br>                         
+                                <input type="text" id="surname" name="Прізвище" placeholder="Введіть прізвище"><br>
+                                <input type="tel" id="phone" name="Телефон" placeholder="Ваш телефон"><br>
+
+                                <select class="select__item" id="params" name="Доставка">
+                                    <option value="">Спосіб доставки</option>
+                                    <option value="НоваПоштаВідділення">Нова Пошта відділення</option>
+                                    <option value="Нова Пошта поштомат">Нова Пошта поштомат</option>
+                                    <option value="Нова Пошта доставка кур'єром">Нова Пошта доставка кур'єром</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select><br>
+
+                                <input type="tel" id="region" name="Область" placeholder="Область"><br>
+                                <input type="text" id="city" name="Місто" placeholder="Місто"><br>                         
+                                <input type="text" id="postnumber" name="Номер відділення або індекс" placeholder="Номер відділення або індекс"><br>
+                                <input type="text" id="address" name="Адреса відділення пошти" placeholder="Адреса відділення пошти"><br>
+                            
+                            </form>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart__info">
+                                <p class="cart__info-text">Інформація про замовлення</p>
+                                <p class="cart__info-text_span" >У вашому кошику <span class="cart__count-order">0</span> замовлення:</p>
+                            </div>
+                            <ul class="cart-content__list" data-simplebar></ul>
+                            <div class="cart-content__bottom">
+                                <div class="cart-content__fullprice">
+                                    <p class="full__price-text">Сума замовлення:</p>
+                                    <span class="fullprice">0 грн</span>
+                                </div>
+                                <button class="cart-content__btn" id="submitOrderBtn">Оформити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bottom__panel">
+                <div class="panel__link">
+                    <a href="../../../catalog-page/gadgets.html" class="catalog">Гаджети</a>
+                    <a href="../../../catalog-page/microphones.html">Мікрофони</a>
+                </div>
+            </div>
+        </div>
+        <div class="page__container">
+            <div class="inner__page-container">
+                <div class="left">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class="slide"><img class="slide__img" src="../../../image/microphones/mkf-08-b/1.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/microphones/mkf-08-b/2.png" alt="Slide 1"></div>
+                        </div>
+                        <button class="prevBtn"><img src="../../../icon/left.png"></button>
+                        <button class="nextBtn"><img src="../../../icon/right.png"></button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1 class="page__title">Мікрофон Петличний Бездротовий XO MKF08B Lightning</h1>
+                    <p class="page__price">607 грн</p>
+
+                    <button class="order__btn">Купити</button>
+
+                    <div class="hidden__block">
+                        <p class="descr">
+                            <span class="descr__faat">Опис</span><br><br>
+                            Мікрофон Петличний Бездротовий XO MKF08B Lightning - це високотехнологічний пристрій, який зробить процес запису якісного, чистого звуку максимально зручним. Модель виділяється простотою в експлуатації, має невеликі розміри та вагу. Її з комфортом можна носити із собою та кріпити на одязі у необхідному місці за допомогою прищіпки. Аксесуар складається з двох деталей: петличного всеспрямованого мікрофона електретного типу та бездротового адаптера для приймання звукового сигналу, який призначений для підключення до звукозаписувального пристрою. Їхні корпуси надійно зібрані, виготовлені з міцного, приємного на дотик ABS пластику. Головка мікрофона прикрита насадкою з пінополіуретану, яка забезпечує ефективне вловлювання звуку без сторонніх шумів при рухах і навіть сильному вітрі. Мікрофон оснащений функцією шумоподавлення, LED індикатором, кнопкою включення, вбудованим акумулятором місткістю 70mAh та роз'ємом Type-C для його заряджання. Час його безперервної роботи становитиме близько 6 годин, а час зарядки не триватиме понад 90 хвилин. Адаптер забезпечує передачу звуку із затримкою всього 15 мс бездротового зв'язку на частоті 2.4Ghz в радіусі до 15 м. Для його повноцінної роботи не потрібно увімкнення Bluetooth на смартфоні та встановлення додаткових програм. Аксесуар сумісний з більшістю моделей смартфонів Huawei, Xiaomi, Oneplus та інших брендів, а також з деякими моделями смартфонів Samsung.<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Характеристики</span><br><br>
+                            Ємність акумулятора, mah:70<br>
+                            Версія bluetooth:5.0<br>
+                            Виробник::XO<br>
+                            Висота, мм:100<br>
+                            Глибина, мм:35<br>
+                            Комплектація:Мікрофон Петличний Безпровідний, кабель<br>
+                            Матеріал корпусу: Пластик<br>
+                            Спосіб підключення: Бездротовий<br>
+                            Тип: Микрофон<br>
+                            Тип кабелю: Lightning<br>
+                            Час роботи, ч: 1.5<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Гарантія</span><br><br>
+                            6 місяців гарантії від виробника<br>
+                            Обмін/повернення замовлення впродовж 14 днів <br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Доставка</span><br><br>
+                            Адресна доставка кур'єром Нова Пошта<br>
+                            Доставка в поштомат Нова Пошта<br>
+                            Доставка у відділення Нова Пошта<br>
+                            Доставка у поштове відділення Укрпошти<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Оплата</span><br><br>
+                            Оплата карткою у відділенні, Оплата під час отримання товару, Google Pay, Apple Pay, Visa, Mastercard
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer__item">
+
+            <a href="./index.html" class="logo__link">UPTONNN</a>
+            <span>ⓒ 2024</span>
+
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const prevBtn = document.querySelector(".prevBtn");
+            const nextBtn = document.querySelector(".nextBtn");
+
+            let counter = 0;
+
+            nextBtn.addEventListener("click", function () {
+                if (counter < 1) {
+                counter++;
+                } else {
+                counter = 0;
+                }
+                updateSlider();
+            });
+
+            prevBtn.addEventListener("click", function () {
+                if (counter > 0) {
+                counter--;
+                } else {
+                counter = 1;
+                }
+                updateSlider();
+            });
+
+            function updateSlider() {
+                const translateXValue = -counter * 100 + "%";
+                slider.style.transform = "translateX(" + translateXValue + ")";
+            }
+            });
+
+    </script>
+    
+    <script src="../../../js/simplebar.js"></script>
+    <script src="../../../js/cart.js"></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+
+    
+</body>
+</html>

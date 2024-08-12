@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./icon/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/simplebar.css">
+    <link rel="stylesheet" href="./css/animation-line.css">
+    <link rel="stylesheet" href="./catalog-page/catalog-page.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>UPTONNN | Зручності у кожному дотику</title>
+</head>
+<body>
+
+    <div class="main__container">
+        <div class="animationn__line">
+            <div>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+            </div>
+        </div>
+        <div class="nav__panel">
+            <div class="top__panel">
+                <a href="./index.html" class="logo__link">UPTONNN</a>
+                <div class="cart__item">
+                    <button class="cart__btn" onclick="toggleSidebar()">
+                        <img src="./icon/cart-contents.svg" alt="Cart" class="cart__icon">
+                    </button>
+                    <span class="cart__quantity">0</span>
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <div class="top__bar">
+                        <p class="bar__title">кошик</p>
+                        <button class="close-btn" onclick="closeSidebar()">
+                            <img src="../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+
+                    <div class="cart__image-item">
+                        <img src="./icon/shopping-cart.svg" alt="img" class="cart__img-img">
+                        <p>кошик порожній</p>
+                    </div>
+
+                    <div class="cart__grid">
+                        <div class="contact__item">
+                            <p class="cart__info-text">1. Контактні дані</p>
+                            <form class="contact__form" id="orderForm" method="post">
+                                <input type="text" id="name" name="Ім'я" placeholder="Введіть ім'я"><br>                         
+                                <input type="text" id="surname" name="Прізвище" placeholder="Введіть прізвище"><br>
+                                <input type="tel" id="phone" name="Телефон" placeholder="Ваш телефон"><br>
+
+                                <select class="select__item" id="params" name="Доставка">
+                                    <option value="">Спосіб доставки</option>
+                                    <option value="НоваПоштаВідділення">Нова Пошта відділення</option>
+                                    <option value="Нова Пошта поштомат">Нова Пошта поштомат</option>
+                                    <option value="Нова Пошта доставка кур'єром">Нова Пошта доставка кур'єром</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select><br>
+
+                                <input type="tel" id="region" name="Область" placeholder="Область"><br>
+                                <input type="text" id="city" name="Місто" placeholder="Місто"><br>                         
+                                <input type="text" id="postnumber" name="Номер відділення або індекс" placeholder="Номер відділення або індекс"><br>
+                                <input type="text" id="address" name="Адреса відділення пошти" placeholder="Адреса відділення пошти"><br>
+                            
+                            </form>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart__info">
+                                <p class="cart__info-text">Інформація про замовлення</p>
+                                <p class="cart__info-text_span" >У вашому кошику <span class="cart__count-order">0</span> замовлення:</p>
+                            </div>
+                            <ul class="cart-content__list" data-simplebar></ul>
+                            <div class="cart-content__bottom">
+                                <div class="cart-content__fullprice">
+                                    <p class="full__price-text">Сума замовлення:</p>
+                                    <span class="fullprice">0 грн</span>
+                                </div>
+                                <button class="cart-content__btn" id="submitOrderBtn">Оформити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="bottom__panel">
+                <div class="catalog__item">
+                    <button class="catalog__btn" onclick="togglePanel()">Каталог<img src="./icon/chevron-icon.svg" alt="Arrow" class="arrow__icon"></button>
+                </div>
+
+                <div id="panelContent" class="panel-content">
+                    <div class="link__item">
+                        <a href="../../catalog-page/car.html" class="link">Автомобільні аксесуари</a>
+                        <a href="../../catalog-page/powerbank.html" class="link">Акумулятори та powerbank</a>
+                        <a href="../../catalog-page/gadgets.html" class="link">Гаджети</a>
+                        <a href="../../catalog-page/chargers.html" class="link">Зарядки та кабелі</a>
+                        <a href="../../catalog-page/pc.html" class="link">Комп'ютерна периферія</a>
+                        <a href="../../catalog-page/headphone.html" class="link">Навушники</a>
+                    </div>
+                </div>
+
+                <div class="search__item">
+                    <button class="search__btn" onclick="toggleSearchPanel()">
+                        <img src="./icon/search.svg" alt="Search" class="search__icon">
+                    </button>
+                    <p>пошук</p>
+                </div>
+
+                <div id="searchPanel" class="search__panel">
+                    <div class="top__search-panel">
+                        <input type="text" class="input__container" placeholder="uptonnn search" oninput="filterResults(); toggleSearchList()">
+                        <button class="close__btn" onclick="closeSearchPanelFinal()">
+                            <img src="./icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+                    <ul id="searchList" class="search__list"></ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="hero__item">
+            <h1 class="hero__title">
+                зручності у кожному дотику
+            </h1>
+            <span>є що обрати</span>
+        </div>
+
+
+        <main class="main">
+            <p class="line__descr">Тебе зацікавить &#10140;</p>
+            <div class="container">
+                <div class="scroll">
+
+                    <a href="./catalog-page/w-charger.html" class="card">
+                        <img src="./image/line-image/1.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Бездротові пристрої</p>
+                    </a>
+                    <a href="./catalog-page/pc-head.html" class="card">
+                        <img src="./image/line-image/2.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Ігрові навушники</p>
+                    </a>
+                    <a href="./catalog-page/tripod.html" class="card">
+                        <img src="./image/line-image/3.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Штативи</p>
+                    </a>
+                    <a href="./catalog-page/catalog-holder.html" class="card">
+                        <img src="./image/line-image/4.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Тримачі</p>
+                    </a>
+                    <a href="./catalog-page/mouse.html" class="card">
+                        <img src="./image/line-image/5.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Мишки</p>
+                    </a>
+                    <a href="./catalog-page/ssd.html" class="card">
+                        <img src="./image/line-image/6.png" alt="img" class="inner__img">
+                        <p class="card__title-text">SSD диски</p>
+                    </a>
+                    <a href="./catalog-page/microphones.html" class="card">
+                        <img src="./image/line-image/7.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Петличні мікрофони</p>
+                    </a>
+                    <a href="./catalog-page/keyboard.html" class="card">
+                        <img src="./image/line-image/8.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Клавіатури</p>
+                    </a>
+                    <a href="./catalog-page/stylus.html" class="card">
+                        <img src="./image/line-image/9.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Стилуси</p>
+                    </a>
+                    <a href="./catalog-page/watch.html" class="card">
+                        <img src="./image/line-image/10.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Смарт-годинники</p>
+                    </a>
+                    <a href="./catalog-page/bt-head.html" class="card">
+                        <img src="./image/line-image/11.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Блютуз навушники</p>
+                    </a>
+                    <a href="./catalog-page/network.html" class="card">
+                        <img src="./image/line-image/12.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Мережеві подовжувачі</p>
+                    </a>
+                    <a href="./catalog-page/catalog-fm.html" class="card">
+                        <img src="./image/line-image/13.png" alt="img" class="inner__img">
+                        <p class="card__title-text">FM трансмітери</p>
+                    </a>
+                    <a href="./catalog-page/bt-head-tws.html" class="card">
+                        <img src="./image/line-image/14.png" alt="img" class="inner__img">
+                        <p class="card__title-text">TWS гарнітури</p>
+                    </a>
+                    <a href="./catalog-page/st-charger.html" class="card">
+                        <img src="./image/line-image/15.png" alt="img" class="inner__img">
+                        <p class="card__title-text">Зарядні пристрої</p>
+                    </a>
+
+                </div>
+            </div>
+        </main>
+
+        <p class="text__top">Зараз в ТОП</p>
+
+        <div class="inner__catalog">
+
+            <a href="../page/gadgets/microphones/bfk-12.html" class="cart__catalog">
+                <img src="../image/microphones/bfk-12/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон бездротовий Borofone BFK12</p>
+                    <p class="price__text">789 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/bkf-12-type-c.html" class="cart__catalog">
+                <img src="../image/microphones/bfk-12-type-c/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон бездротовий Borofone BFK12 Type-C</p>
+                    <p class="price__text">395 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/dl-56.html" class="cart__catalog">
+                <img src="../image/microphones/dl-56/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон бездротовий Hoco DI56 Type-C</p>
+                    <p class="price__text">789 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/l-14.html" class="cart__catalog">
+                <img src="../image/microphones/l-14/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон бездротовий Hoco L14 Lightning</p>
+                    <p class="price__text">680 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/l-15.html" class="cart__catalog">
+                <img src="../image/microphones/l-15/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон бездротовий Hoco L15 Type-C</p>
+                    <p class="price__text">449 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/mkf-08-b.html" class="cart__catalog">
+                <img src="../image/microphones/mkf-08-b/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон бездротовий XO MKF08B Lightning</p>
+                    <p class="price__text">607 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/headphone/pc/jh-790.html" class="cart__catalog">
+                <img src="../image/headphone/pc/jh-790/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Jeqang JH-790</p>
+                    <p class="price__text">620 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-88.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-88/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH88</p>
+                    <p class="price__text">870 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-90.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-90/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH90</p>
+                    <p class="price__text">1 990 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-91.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-91/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH91</p>
+                    <p class="price__text">1 250 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/w-107.html" class="cart__catalog">
+                <img src="../image/headphone/pc/w-107/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco W107</p>
+                    <p class="price__text">640 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../../page/gadgets/watch/bd-3-black.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-3-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD3 Ultra</p>
+                    <p class="price__text">1 024 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/bd-3-orange.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-3-orange/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD2</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/bd-5.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-5/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD5</p>
+                    <p class="price__text">908 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/w-8-pro.html" class="cart__catalog">
+                <img src="../../image/watch-img/x8-pro/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">XO W8 Pro</p>
+                    <p class="price__text">1 258 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../../page/gadgets/watch/y-16-black.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-16-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y16</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-16-silver.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-16-silver/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y16</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="./catalog-page/gadgets.html" class="cart__catalog-all">
+                <img src="./image/line-image/all.png" alt="img" class="cart__catalog-img">
+                <span class="all-text">Дивитись більше</span>
+            </a>
+
+
+        </div>
+        
+        <p class="text__top">Популярне</p>
+
+        <div class="inner__catalog">
+
+            <a href="../page/chargers-cables/w-chargers/bq-20.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/bq-20/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BQ20</p>
+                    <p class="price__text">319 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/cq-1.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/cq-1/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco CQ1 3-in-1 15W</p>
+                    <p class="price__text">889 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/cq-2.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/cq-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco CQ2 3-in-1 15W </p>
+                    <p class="price__text">920 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/cq-3.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/cq-3/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco CQ3 3-in-1 Magnetic 15W</p>
+                    <p class="price__text">1 104 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/cx-007.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/cx-007/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">XO CX007 15W Magnetic</p>
+                    <p class="price__text">672 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/jjt-970.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/jjt-970/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">JJT-970 с MagSafe 4in1 25W</p>
+                    <p class="price__text">1 305 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/jjt-s-37.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/jjt-s37/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">JJT-S37 5in1+Lamp/Alarm Clock</p>
+                    <p class="price__text">1 419 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/wx-030.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/wx-030/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">XO WX030 15W</p>
+                    <p class="price__text">799 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/chargers-cables/w-chargers/y-35.html" class="cart__catalog">
+                <img src="../image/wireless-charger/w-charger/y-35/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">MagSafe Y35 3in1 3.0A 15W</p>
+                    <p class="price__text">905 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="./catalog-page/chargers.html" class="cart__catalog-all">
+                <img src="./image/line-image/all.png" alt="img" class="cart__catalog-img">
+                <span class="all-text">Дивитись більше</span>
+            </a>
+
+        </div>
+
+        <p class="text__top">Для геймерів</p>
+
+        <div class="inner__catalog">
+
+            <a href="../page/computer-peripherals/mouse/wg-c-2.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wgc-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WGC2</p>
+                    <p class="price__text">980 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/wg-12.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-12/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG12</p>
+                    <p class="price__text">458 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/wg-12-r.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-12-r/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG12R</p>
+                    <p class="price__text">542 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/wg-11.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-11/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG11</p>
+                    <p class="price__text">492 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/wg-10.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-10/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG10</p>
+                    <p class="price__text">519 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/gm-24.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/gm-24/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco GM24</p>
+                    <p class="price__text">332 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/g-304.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/g-304/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Logitech G304</p>
+                    <p class="price__text">315 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/dl-43.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/dl-43/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco DI43</p>
+                    <p class="price__text">589 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/keyboard/gk-968.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/jk-968/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">JEQANG JK-968</p>
+                    <p class="price__text">459 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/kb-01.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/kb-01/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">XO KB-01</p>
+                    <p class="price__text">580 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/kx-302-s.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/kx-302-s/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech Major KX302s</p>
+                    <p class="price__text">829 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/mk-857.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/mk-857/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MAXFIT 61</p>
+                    <p class="price__text">1 820 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/mk-876-red.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/mk-876-red/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">ATOM MK876 Red</p>
+                    <p class="price__text">1 420 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/mk-876.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/mk-876/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">ATOM MK876 Blue</p>
+                    <p class="price__text">1 420 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/jh-790.html" class="cart__catalog">
+                <img src="../image/headphone/pc/jh-790/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Jeqang JH-790</p>
+                    <p class="price__text">620 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-88.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-88/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH88</p>
+                    <p class="price__text">870 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-90.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-90/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH90</p>
+                    <p class="price__text">1 990 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-91.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-91/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH91</p>
+                    <p class="price__text">1 250 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/w-107.html" class="cart__catalog">
+                <img src="../image/headphone/pc/w-107/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco W107</p>
+                    <p class="price__text">640 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="./catalog-page/pc.html" class="cart__catalog-all">
+                <img src="./image/line-image/all.png" alt="img" class="cart__catalog-img">
+                <span class="all-text">Дивитись більше</span>
+            </a>
+
+        </div>
+
+        <div class="footer__item">
+
+            <a href="./index.html" class="logo__link">UPTONNN</a>
+            <span>ⓒ 2024</span>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const scroll = document.querySelector(".scroll");
+        var isDown = false;
+        var scrollX;
+        var scrollLeft;
+
+        scroll.addEventListener("mouseup", () => {
+            isDown = false;
+            scroll.classList.remove("active");
+        });
+
+        scroll.addEventListener("mouseleave", () => {
+            isDown = false;
+            scroll.classList.remove("active");
+        });
+
+        scroll.addEventListener("mousedown", (e) => {
+            e.preventDefault();
+            isDown = true;
+            scroll.classList.add("active");
+            scrollX = e.pageX - scroll.offsetLeft;
+            scrollLeft = scroll.scrollLeft;
+        });
+
+        scroll.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            var element = e.pageX - scroll.offsetLeft;
+            var scrolling = (element - scrollX) * 2;
+            scroll.scrollLeft = scrollLeft - scrolling;
+        });
+
+    </script>
+
+    <script src="./js/simplebar.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/catalog.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/search-list.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    
+</body>
+</html>

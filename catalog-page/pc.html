@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../icon/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/animation-line.css">
+    <link rel="stylesheet" href="../catalog-page/catalog-page.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>UPTONNN | Купити Комп'ютерна периферія</title>
+</head>
+<body>
+
+    <div class="main__container">
+        <div class="animationn__line">
+            <div>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+            </div>
+        </div>
+        <div class="nav__panel">
+            <div class="top__panel">
+                <a href="../index.html" class="logo__link">UPTONNN</a>
+                <div class="cart__item">
+                    <button class="cart__btn" onclick="toggleSidebar()">
+                        <img src="../icon/cart-contents.svg" alt="Cart" class="cart__icon">
+                    </button>
+                    <span class="cart__quantity">0</span>
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <div class="top__bar">
+                        <p class="bar__title">кошик</p>
+                        <button class="close-btn" onclick="closeSidebar()">
+                            <img src="../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+
+                    <div class="cart__image-item">
+                        <img src="../../icon/shopping-cart.svg" alt="img" class="cart__img-img">
+                        <p>кошик порожній</p>
+                    </div>
+
+                    <div class="cart__grid">
+                        <div class="contact__item">
+                            <p class="cart__info-text">1. Контактні дані</p>
+                            <form class="contact__form" id="orderForm" method="post">
+                                <input type="text" id="name" name="Ім'я" placeholder="Введіть ім'я"><br>                         
+                                <input type="text" id="surname" name="Прізвище" placeholder="Введіть прізвище"><br>
+                                <input type="tel" id="phone" name="Телефон" placeholder="Ваш телефон"><br>
+
+                                <select class="select__item" id="params" name="Доставка">
+                                    <option value="">Спосіб доставки</option>
+                                    <option value="НоваПоштаВідділення">Нова Пошта відділення</option>
+                                    <option value="Нова Пошта поштомат">Нова Пошта поштомат</option>
+                                    <option value="Нова Пошта доставка кур'єром">Нова Пошта доставка кур'єром</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select><br>
+
+                                <input type="tel" id="region" name="Область" placeholder="Область"><br>
+                                <input type="text" id="city" name="Місто" placeholder="Місто"><br>                         
+                                <input type="text" id="postnumber" name="Номер відділення або індекс" placeholder="Номер відділення або індекс"><br>
+                                <input type="text" id="address" name="Адреса відділення пошти" placeholder="Адреса відділення пошти"><br>
+                            
+                            </form>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart__info">
+                                <p class="cart__info-text">Інформація про замовлення</p>
+                                <p class="cart__info-text_span" >У вашому кошику <span class="cart__count-order">0</span> замовлення:</p>
+                            </div>
+                            <ul class="cart-content__list" data-simplebar></ul>
+                            <div class="cart-content__bottom">
+                                <div class="cart-content__fullprice">
+                                    <p class="full__price-text">Сума замовлення:</p>
+                                    <span class="fullprice">0 грн</span>
+                                </div>
+                                <button class="cart-content__btn" id="submitOrderBtn">Оформити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bottom__panel">
+                <div class="catalog__item">
+                    <button class="catalog__btn" onclick="togglePanel()">Каталог<img src="../icon/chevron-icon.svg" alt="Arrow" class="arrow__icon"></button>
+                </div>
+
+                <div id="panelContent" class="panel-content">
+                    <div class="link__item">
+                        <a href="../catalog-page/car.html" class="link">Автомобільні аксесуари</a>
+                        <a href="../catalog-page/powerbank.html" class="link">Акумулятори та powerbank</a>
+                        <a href="../catalog-page/gadgets.html" class="link">Гаджети</a>
+                        <a href="../catalog-page/chargers.html" class="link">Зарядки та кабелі</a>
+                        <a href="../catalog-page/pc.html" class="link">Комп'ютерна периферія</a>
+                        <a href="../catalog-page/headphone.html" class="link">Навушники</a>
+                    </div>
+                </div>
+
+                <div class="search__item">
+                    <button class="search__btn" onclick="toggleSearchPanel()">
+                        <img src="../icon/search.svg" alt="Search" class="search__icon">
+                    </button>
+                    <p>пошук</p>
+                </div>
+
+                <div id="searchPanel" class="search__panel">
+                    <div class="top__search-panel">
+                        <input type="text" class="input__container" placeholder="uptonnn search" oninput="filterResults(); toggleSearchList()">
+                        <button class="close__btn" onclick="closeSearchPanelFinal()">
+                            <img src="../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+                    <ul id="searchList" class="search__list"></ul>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="catalog__title">Комп'ютерна периферія</h1>
+
+        <div class="catalog__line">
+            <a href="../catalog-page/mouse.html" class="catalog__page"><img src="../image/pc-img/mouse/g-306/1.png" alt="">Миші</a>
+            <a href="../catalog-page/keyboard.html" class="catalog__page"><img src="../image/pc-img/keyboard/mk-876-red/1.png" alt="">Клавіатури</a>
+            <a href="../catalog-page/ssd.html" class="catalog__page"><img src="../image/pc-img/ssd/patriot-240/1.png" alt="">SSD диски</a>
+            <a href="../catalog-page/outer-ssd.html" class="catalog__page"><img src="../image/pc-img/outer-ssd/q-5/1.png" alt="">Зовнішні кишені</a>
+            <a href="../catalog-page/pc-head.html" class="catalog__page"><img src="../image/headphone/pc/hq-55/1.png" alt="">Ігрові навушники</a>
+            <a href="../catalog-page/speaker.html" class="catalog__page"><img src="../image/pc-img/pc-speker/ac-900/1.png" alt="">Колонки для ПК</a>
+        </div>
+
+        <div class="inner__catalog">
+
+            <!-- pc -->
+
+            <a href="../page/computer-peripherals/mouse/wg-c-2.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wgc-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WGC2</p>
+                    <p class="price__text">980 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/wg-12.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-12/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG12</p>
+                    <p class="price__text">458 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/hg-25.html" class="cart__catalog">
+                <img src="../image/headphone/pc/hg-25/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech HG25</p>
+                    <p class="price__text">860 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/340-120.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/as-340-120/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Apacer AS340 120GB 2.5"</p>
+                    <p class="price__text">525 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/340-240.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/as-340-240/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Apacer AS340 240GB 2.5"</p>
+                    <p class="price__text">820 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/gk-1905.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/gk-1905/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">JEQANG JK-1905</p>
+                    <p class="price__text">270 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/gk-905.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/gk-905/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">JEQANG JK-905</p>
+                    <p class="price__text">319 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/wg-12-r.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-12-r/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG12R</p>
+                    <p class="price__text">542 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/wg-11.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-11/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG11</p>
+                    <p class="price__text">492 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/hg-26.html" class="cart__catalog">
+                <img src="../image/headphone/pc/hg-26/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech HG26</p>
+                    <p class="price__text">1 720 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/patriot-480.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/patriot-480/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Burst Elite 480GB 2.5"</p>
+                    <p class="price__text">1 282 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/patriot-960.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/patriot-960/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Burst Elite 960GB 2.5"</p>
+                    <p class="price__text">2 109 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/hq-53.html" class="cart__catalog">
+                <img src="../image/headphone/pc/hq-53/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech HQ53</p>
+                    <p class="price__text">830 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/gk-968.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/jk-968/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">JEQANG JK-968</p>
+                    <p class="price__text">459 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/gm-23.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/gm-23/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco GM23</p>
+                    <p class="price__text">334 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/wg-10.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/wg-10/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WG10</p>
+                    <p class="price__text">519 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/w-190.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/w-190/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech W190</p>
+                    <p class="price__text">498 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/hq-54.html" class="cart__catalog">
+                <img src="../image/headphone/pc/hq-54/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech HQ54</p>
+                    <p class="price__text">680 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/hq-55.html" class="cart__catalog">
+                <img src="../image/headphone/pc/hq-55/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech HQ55</p>
+                    <p class="price__text">760 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/patriot-120.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/patriot-120/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Burst Elite 120GB 2.5"</p>
+                    <p class="price__text">557 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/patriot-240.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/patriot-240/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Burst Elite 240GB 2.5"</p>
+                    <p class="price__text">830 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/mk-857.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/mk-857/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MAXFIT 61</p>
+                    <p class="price__text">1 820 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/mk-876-red.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/mk-876-red/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">ATOM MK876 Red</p>
+                    <p class="price__text">1 420 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/m-280.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/m-280/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Logitech M280</p>
+                    <p class="price__text">314 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/m-275.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/m-275/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Logitech M275</p>
+                    <p class="price__text">299 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/jh-750.html" class="cart__catalog">
+                <img src="../image/headphone/pc/jh-750/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Jeqang JH-750 7.1</p>
+                    <p class="price__text">532 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/630-480.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/su-630-480/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Ultimate SU630 480GB 2.5"</p>
+                    <p class="price__text">1 242 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/650-120.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/su-650-120/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Ultimate SU650 120GB 2.5"</p>
+                    <p class="price__text">610 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/jh-760.html" class="cart__catalog">
+                <img src="../image/headphone/pc/jh-760/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Jeqang JH-760 7.1</p>
+                    <p class="price__text">760 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/kb-01.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/kb-01/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">XO KB-01</p>
+                    <p class="price__text">580 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/kx-302-s.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/kx-302-s/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech Major KX302s</p>
+                    <p class="price__text">829 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/m-220.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/m-220/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Logitech M220</p>
+                    <p class="price__text">286 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/gm-24.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/gm-24/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco GM24</p>
+                    <p class="price__text">332 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/mk-876.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/mk-876/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">ATOM MK876 Blue</p>
+                    <p class="price__text">1 420 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/keyboard/wk-894.html" class="cart__catalog">
+                <img src="../image/pc-img/keyboard/wk-894/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech WK894</p>
+                    <p class="price__text">679 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/gm-21.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/gm-21/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco GM21</p>
+                    <p class="price__text">236 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/jh-790.html" class="cart__catalog">
+                <img src="../image/headphone/pc/jh-790/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Jeqang JH-790</p>
+                    <p class="price__text">620 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-14.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-14/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB3.0</p>
+                    <p class="price__text">335 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-19.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-19/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB3.1</p>
+                    <p class="price__text">369 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-88.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-88/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH88</p>
+                    <p class="price__text">870 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/gm-15.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/gm-15/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco GM15</p>
+                    <p class="price__text">282 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/g-306.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/g-306/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Logitech G306</p>
+                    <p class="price__text">285 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/g-304.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/g-304/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Logitech G304</p>
+                    <p class="price__text">315 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/340-480.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/as-340-480/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Apacer AS340 480GB 2.5"</p>
+                    <p class="price__text">1 242 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-10-silver.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-10-silver/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB3.0</p>
+                    <p class="price__text">312 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-14-silver.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-14-silver/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB3.0</p>
+                    <p class="price__text">345 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/400-240.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/a-400-240/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kingston SSDNow A400 240GB 2.5"</p>
+                    <p class="price__text">1 119 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/ssd/630-240.html" class="cart__catalog">
+                <img src="../image/pc-img/ssd/su-630-240/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Ultimate SU630 240GB 2.5"</p>
+                    <p class="price__text">840 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-90.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-90/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH90</p>
+                    <p class="price__text">1 990 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/mh-91.html" class="cart__catalog">
+                <img src="../image/headphone/pc/mh-91/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Fantech MH91</p>
+                    <p class="price__text">1 250 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/dl-43.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/dl-43/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco DI43</p>
+                    <p class="price__text">589 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/w-104.html" class="cart__catalog">
+                <img src="../image/headphone/pc/w-104/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco W104</p>
+                    <p class="price__text">650 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-10-black.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-10-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB3.0</p>
+                    <p class="price__text">312 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-10-blue.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-10-blue/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB3.0</p>
+                    <p class="price__text">312 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/w-106.html" class="cart__catalog">
+                <img src="../image/headphone/pc/w-106/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco W106</p>
+                    <p class="price__text">475 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/mouse/bg-7.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/bg-7/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BG7</p>
+                    <p class="price__text">250 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/mouse/bg-5.html" class="cart__catalog">
+                <img src="../image/pc-img/mouse/bg-5/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BG5</p>
+                    <p class="price__text">228 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/headphone/pc/w-107.html" class="cart__catalog">
+                <img src="../image/headphone/pc/w-107/1.png" alt="" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco W107</p>
+                    <p class="price__text">640 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/q-5.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/q-5/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" Q5 USB2.0</p>
+                    <p class="price__text">290 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/outer-ssd/s-10-2-0.html" class="cart__catalog">
+                <img src="../image/pc-img/outer-ssd/s-10-silver-2-0/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Зовнішня кишеня 2,5" USB2.0</p>
+                    <p class="price__text">290 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../page/computer-peripherals/pc-speaker/i-530.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/i-530/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli i-530</p>
+                    <p class="price__text">547 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/js-880.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/js-880/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Jeqang JS-880</p>
+                    <p class="price__text">599 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/k-200.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/k-200/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli K200</p>
+                    <p class="price__text">478 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/k-500.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/k-500/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli K500</p>
+                    <p class="price__text">458 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/ks-02.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/ks-02/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli KS-02</p>
+                    <p class="price__text">436 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/ks-08.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/ks-08/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli KS-08</p>
+                    <p class="price__text">410 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/ac-900.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/ac-900/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli L-1010</p>
+                    <p class="price__text">529 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/l-2020.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/l-2020/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli L-2020</p>
+                    <p class="price__text">412 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/computer-peripherals/pc-speaker/t-007.html" class="cart__catalog">
+                <img src="../image/pc-img/pc-speker/t-007/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Kisonli T-007</p>
+                    <p class="price__text">541 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="footer__item">
+
+            <a href="./index.html" class="logo__link">UPTONNN</a>
+            <span>ⓒ 2024</span>
+
+        </div>
+        
+    </div>
+
+    <script src="../js/simplebar.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/catalog.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/search-list.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    
+</body>
+</html>

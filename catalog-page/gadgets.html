@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../icon/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/animation-line.css">
+    <link rel="stylesheet" href="../../catalog-page/catalog-page.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>UPTONNN | Купити Гаджети</title>
+</head>
+<body>
+
+    <div class="main__container">
+        <div class="animationn__line">
+            <div>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+            </div>
+        </div>
+        <div class="nav__panel">
+            <div class="top__panel">
+                <a href="../../index.html" class="logo__link">UPTONNN</a>
+                <div class="cart__item">
+                    <button class="cart__btn" onclick="toggleSidebar()">
+                        <img src="../../icon/cart-contents.svg" alt="Cart" class="cart__icon">
+                    </button>
+                    <span class="cart__quantity">0</span>
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <div class="top__bar">
+                        <p class="bar__title">кошик</p>
+                        <button class="close-btn" onclick="closeSidebar()">
+                            <img src="../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+
+                    <div class="cart__image-item">
+                        <img src="../../icon/shopping-cart.svg" alt="img" class="cart__img-img">
+                        <p>кошик порожній</p>
+                    </div>
+
+                    <div class="cart__grid">
+                        <div class="contact__item">
+                            <p class="cart__info-text">1. Контактні дані</p>
+                            <form class="contact__form" id="orderForm" method="post">
+                                <input type="text" id="name" name="Ім'я" placeholder="Введіть ім'я"><br>                         
+                                <input type="text" id="surname" name="Прізвище" placeholder="Введіть прізвище"><br>
+                                <input type="tel" id="phone" name="Телефон" placeholder="Ваш телефон"><br>
+
+                                <select class="select__item" id="params" name="Доставка">
+                                    <option value="">Спосіб доставки</option>
+                                    <option value="НоваПоштаВідділення">Нова Пошта відділення</option>
+                                    <option value="Нова Пошта поштомат">Нова Пошта поштомат</option>
+                                    <option value="Нова Пошта доставка кур'єром">Нова Пошта доставка кур'єром</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select><br>
+
+                                <input type="tel" id="region" name="Область" placeholder="Область"><br>
+                                <input type="text" id="city" name="Місто" placeholder="Місто"><br>                         
+                                <input type="text" id="postnumber" name="Номер відділення або індекс" placeholder="Номер відділення або індекс"><br>
+                                <input type="text" id="address" name="Адреса відділення пошти" placeholder="Адреса відділення пошти"><br>
+                            
+                            </form>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart__info">
+                                <p class="cart__info-text">Інформація про замовлення</p>
+                                <p class="cart__info-text_span" >У вашому кошику <span class="cart__count-order">0</span> замовлення:</p>
+                            </div>
+                            <ul class="cart-content__list" data-simplebar></ul>
+                            <div class="cart-content__bottom">
+                                <div class="cart-content__fullprice">
+                                    <p class="full__price-text">Сума замовлення:</p>
+                                    <span class="fullprice">0 грн</span>
+                                </div>
+                                <button class="cart-content__btn" id="submitOrderBtn">Оформити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bottom__panel">
+                <div class="catalog__item">
+                    <button class="catalog__btn" onclick="togglePanel()">Каталог<img src="../../icon/chevron-icon.svg" alt="Arrow" class="arrow__icon"></button>
+                </div>
+
+                <div id="panelContent" class="panel-content">
+                    <div class="link__item">
+                        <a href="../catalog-page/car.html" class="link">Автомобільні аксесуари</a>
+                        <a href="../catalog-page/powerbank.html" class="link">Акумулятори та powerbank</a>
+                        <a href="../catalog-page/gadgets.html" class="link">Гаджети</a>
+                        <a href="../catalog-page/chargers.html" class="link">Зарядки та кабелі</a>
+                        <a href="../catalog-page/pc.html" class="link">Комп'ютерна периферія</a>
+                        <a href="../catalog-page/headphone.html" class="link">Навушники</a>
+                    </div>
+                </div>
+
+                <div class="search__item">
+                    <button class="search__btn" onclick="toggleSearchPanel()">
+                        <img src="../../icon/search.svg" alt="Search" class="search__icon">
+                    </button>
+                    <p>пошук</p>
+                </div>
+
+                <div id="searchPanel" class="search__panel">
+                    <div class="top__search-panel">
+                        <input type="text" class="input__container" placeholder="uptonnn search" oninput="filterResults(); toggleSearchList()">
+                        <button class="close__btn" onclick="closeSearchPanelFinal()">
+                            <img src="../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+                    <ul id="searchList" class="search__list"></ul>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="catalog__title">Гаджети</h1>
+
+        <div class="catalog__line">
+            <a href="../catalog-page/lamp.html" class="catalog__page"><img src="../image/lamp-img/3-1-lamp/1.png" alt="">Настільні лампи</a>
+            <a href="../catalog-page/bag.html" class="catalog__page"><img src="../image/bag-img/cb-01-13-black/1.png" alt="">Сумки</a>
+            <a href="../catalog-page/watch.html" class="catalog__page"><img src="../image/watch-img/bd-2/1.png" alt="">Смарт-годинники</a>
+            <a href="../catalog-page/stylus.html" class="catalog__page"><img src="../image/stylus-img/gm-103-black/1.png" alt="">Стилуси</a>
+            <a href="../catalog-page/microphones.html" class="catalog__page"><img src="../image/microphones/bfk-12-type-c/1.png" alt="">Мікрофони</a>
+            <a href="../catalog-page/smart-keychain.html" class="catalog__page"><img src="../image/smart-keychain/e-91/1.png" alt="">Розумні брелки</a>
+            <a href="../catalog-page/tripod.html" class="catalog__page"><img src="../image/tripod/2-1-1/1.png" alt="">Штативи</a>
+            <a href="../catalog-page/bt-speaker.html" class="catalog__page"><img src="../image/bt-speaker/a-41/1.png" alt="">Блютуз колонки</a>
+        </div>
+
+        <div class="inner__catalog">
+
+            <!-- gt -->
+
+            <a href="../../page/gadgets/bag/cb-01-13-black.html" class="cart__catalog">
+                <img src="../../image/bag-img/cb-01-13-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Сумка для Ноутбука XO CB01 13"</p>
+                    <p class="price__text">445 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/bag/cb-01-13-gray.html" class="cart__catalog">
+                <img src="../../image/bag-img/cb-01-13-gray/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Сумка для Ноутбука XO CB01 13"</p>
+                    <p class="price__text">445 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-19-black.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-19-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y19 AMOLED</p>
+                    <p class="price__text">1307 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-19-gold.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-19–gold/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y19 AMOLED</p>
+                    <p class="price__text">1307 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-19-silver.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-19–silver/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y19 AMOLED</p>
+                    <p class="price__text">1307 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/2-1-1.html" class="cart__catalog">
+                <img src="../image/tripod/2-1-1/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив 2.1м Посилений</p>
+                    <p class="price__text">512 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/2-1.html" class="cart__catalog">
+                <img src="../image/tripod/2-1/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив 2.1м</p>
+                    <p class="price__text">263 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/3065.html" class="cart__catalog">
+                <img src="../image/tripod/3065/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив 3065 0.65м</p>
+                    <p class="price__text">340 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/bag/cb-01-14-black.html" class="cart__catalog">
+                <img src="../../image/bag-img/cb-01-14-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Сумка для Ноутбука XO CB01 14"</p>
+                    <p class="price__text">465 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/bfk-12.html" class="cart__catalog">
+                <img src="../image/microphones/bfk-12/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Borofone BFK12</p>
+                    <p class="price__text">789 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/bkf-12-type-c.html" class="cart__catalog">
+                <img src="../image/microphones/bfk-12-type-c/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Borofone BFK12 Type-C</p>
+                    <p class="price__text">395 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/bag/cb-01-14-black.html" class="cart__catalog">
+                <img src="../../image/bag-img/cb-01-14-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Сумка для Ноутбука XO CB01 14"</p>
+                    <p class="price__text">465 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-12-orange.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-12-orange/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y12 Ultra</p>
+                    <p class="price__text">1 007 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/3110.html" class="cart__catalog">
+                <img src="../image/tripod/3110/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив 3110 1.1м</p>
+                    <p class="price__text">235 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/3888.html" class="cart__catalog">
+                <img src="../image/tripod/3888/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив 3888 1.1м Remote</p>
+                    <p class="price__text">311 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/by-8.html" class="cart__catalog">
+                <img src="../image/tripod/by-8/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Монопод-Тринога Borofone BY8</p>
+                    <p class="price__text">360 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-16-black.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-16-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y16</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-16-silver.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-16-silver/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y16</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/smart-keychain/bc-100.html" class="cart__catalog">
+                <img src="../image/smart-keychain/bc-100/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Розумний Брелок BC100 Ingenioso</p>
+                    <p class="price__text">451 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/smart-keychain/lp-02.html" class="cart__catalog">
+                <img src="../image/smart-keychain/lp-02/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Розумний Брелок XO LP02</p>
+                    <p class="price__text">410 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/bag/cb-02-15-6.html" class="cart__catalog">
+                <img src="../../image/bag-img/cb-02-15-6/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Рюкзак для Ноутбука XO CB02 15,6"</p>
+                    <p class="price__text">465 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/bag/gm-106.html" class="cart__catalog">
+                <img src="../../image/bag-img/gm-106/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Сумка для Портативних Пристроїв Hoco GM106</p>
+                    <p class="price__text">425 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../../page/gadgets/lamp/3-1.html" class="cart__catalog">
+                <img src="../../image/lamp-img/3-1-lamp/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа 3 в 1 D16</p>
+                    <p class="price__text">758 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/o-z-05.html" class="cart__catalog">
+                <img src="../../image/lamp-img/oz-05/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна XO OZ05</p>
+                    <p class="price__text">845 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/t-2.html" class="cart__catalog">
+                <img src="../image/tripod/t-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив Шарнірний на Струбцині</p>
+                    <p class="price__text">325 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/t-1.html" class="cart__catalog">
+                <img src="../image/tripod/t-1/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив-Пантограф Пружний на Струбцині</p>
+                    <p class="price__text">451 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/xo-2.html" class="cart__catalog">
+                <img src="../image/tripod/xo-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив XO 2 м</p>
+                    <p class="price__text">417 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/o-z-06.html" class="cart__catalog">
+                <img src="../../image/lamp-img/oz-06/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна XO OZ06</p>
+                    <p class="price__text">327 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/smart-keychain/e-91.html" class="cart__catalog">
+                <img src="../image/smart-keychain/e-91/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Розумний Брелок E91 Tiger</p>
+                    <p class="price__text">474 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/smart-keychain/lp-01.html" class="cart__catalog">
+                <img src="../image/smart-keychain/lp-01/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Розумний Брелок XO LP01</p>
+                    <p class="price__text">330 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/dl-56-lg.html" class="cart__catalog">
+                <img src="../image/microphones/dl-56-lg/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Hoco DI56 Lightning</p>
+                    <p class="price__text">1 209 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/bd-5.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-5/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD5</p>
+                    <p class="price__text">908 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/w-8-pro.html" class="cart__catalog">
+                <img src="../../image/watch-img/x8-pro/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">XO W8 Pro</p>
+                    <p class="price__text">1 258 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/y-12-black.html" class="cart__catalog">
+                <img src="../../image/watch-img/y-12-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Hoco Y12 Ultra</p>
+                    <p class="price__text">1 007 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/dl-56.html" class="cart__catalog">
+                <img src="../image/microphones/dl-56/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Hoco DI56 Type-C</p>
+                    <p class="price__text">789 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/q-2.html" class="cart__catalog">
+                <img src="../image/tripod/q-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Настільний Стабілізатор-Підставка Q2</p>
+                    <p class="price__text">1 400 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/ss-09.html" class="cart__catalog">
+                <img src="../image/tripod/ss-09/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Селфі-Штатив XO SS09</p>
+                    <p class="price__text">270 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/t-1-6.html" class="cart__catalog">
+                <img src="../image/tripod/t-1-6/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Штатив 1.6м з Пов Головою та Кліпсами</p>
+                    <p class="price__text">509 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/q-17-3.html" class="cart__catalog">
+                <img src="../../image/lamp-img/q-17-3/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна Q17-3</p>
+                    <p class="price__text">410 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/rl-e-601.html" class="cart__catalog">
+                <img src="../../image/lamp-img/rl-e-601/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна RL-E601</p>
+                    <p class="price__text">758 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/rl-e-615.html" class="cart__catalog">
+                <img src="../../image/lamp-img/rl-e-615/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна RL-E615</p>
+                    <p class="price__text">1 199 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp//rt-e-185.html" class="cart__catalog">
+                <img src="../../image/lamp-img/rt-e-185/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна RT-E185</p>
+                    <p class="price__text">732 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/rt-e-190.html" class="cart__catalog">
+                <img src="../../image/lamp-img/rt-e-190/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна RT-E190</p>
+                    <p class="price__text">510 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/rt-e-510.html" class="cart__catalog">
+                <img src="../../image/lamp-img/rt-e-510/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна RT-E510</p>
+                    <p class="price__text">710 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/p-16.html" class="cart__catalog">
+                <img src="../image/tripod/p-16/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Селфі-Штатив Remax P16</p>
+                    <p class="price__text">238 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/q-1.html" class="cart__catalog">
+                <img src="../image/tripod/q-1/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Настільний Стабілізатор-Підставка Q1</p>
+                    <p class="price__text">572 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/bd-2.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-2/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD2</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/bd-3-black.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-3-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD3 Ultra</p>
+                    <p class="price__text">1 024 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/watch/bd-3-orange.html" class="cart__catalog">
+                <img src="../../image/watch-img/bd-3-orange/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Borofone BD2</p>
+                    <p class="price__text">1 279 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/bfk-12.html" class="cart__catalog">
+                <img src="../image/microphones/bfk-12/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Borofone BFK12</p>
+                    <p class="price__text">1 137 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/l-14.html" class="cart__catalog">
+                <img src="../image/microphones/l-14/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Hoco L14 Lightning</p>
+                    <p class="price__text">680 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/by-11.html" class="cart__catalog">
+                <img src="../image/tripod/by-11/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Монопод-Тринога Borofone BY11</p>
+                    <p class="price__text">273 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/tripod/k-17.html" class="cart__catalog">
+                <img src="../image/tripod/k-17/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Селфі-Штатив Hoco K17</p>
+                    <p class="price__text">365 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/rt-e-710.html" class="cart__catalog">
+                <img src="../../image/lamp-img/rt-e-710/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна RT-E710</p>
+                    <p class="price__text">987 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/ws-60-16.html" class="cart__catalog">
+                <img src="../../image/lamp-img/ws-6016/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна WS-6016</p>
+                    <p class="price__text">268 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/ws-702-s.html" class="cart__catalog">
+                <img src="../../image/lamp-img/ws-702-s/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна WS-702S</p>
+                    <p class="price__text">758 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/lamp/ws20-20-s.html" class="cart__catalog">
+                <img src="../../image/lamp-img/ws-2020-s/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Лампа Настільна WS-2020S</p>
+                    <p class="price__text">494 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+            <a href="../../page/gadgets/stylus/gm-103-black.html" class="cart__catalog">
+                <img src="../../image/stylus-img/gm-103-black/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Стілус Hoco GM103</p>
+                    <p class="price__text">275 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/stylus/gm-103.html" class="cart__catalog">
+                <img src="../../image/stylus-img/gm-103/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Стілус Hoco GM103</p>
+                    <p class="price__text">275 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/stylus/gm-107.html" class="cart__catalog">
+                <img src="../../image/stylus-img/gm-107/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Стілус Hoco GM107</p>
+                    <p class="price__text">703 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/l-15.html" class="cart__catalog">
+                <img src="../image/microphones/l-15/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон Hoco L15 Type-C</p>
+                    <p class="price__text">449 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/mkf-08-b.html" class="cart__catalog">
+                <img src="../image/microphones/mkf-08-b/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон XO MKF08B Lightning</p>
+                    <p class="price__text">607 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../page/gadgets/microphones/mkf-09-b.html" class="cart__catalog">
+                <img src="../image/microphones/mkf-09-b/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Мікрофон XO MKF09B Lightning</p>
+                    <p class="price__text">1 231 грн</p>
+                    <img src="../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/stylus/gm-108.html" class="cart__catalog">
+                <img src="../../image/stylus-img/gm-108/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Стілус Hoco GM108</p>
+                    <p class="price__text">670 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/stylus/st-03.html" class="cart__catalog">
+                <img src="../../image/stylus-img/st-03/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Стілус XO ST-03</p>
+                    <p class="price__text">678 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+            <a href="../../page/gadgets/stylus/st-05.html" class="cart__catalog">
+                <img src="../../image/stylus-img/st-05/1.png" alt="img" class="cart__catalog-img">
+                <div class="title__price-item_cart">
+                    <p class="name__text">Стілус XO ST-05</p>
+                    <p class="price__text">814 грн</p>
+                    <img src="../../icon/icon-star__full.png" alt="star" class="start__icon">
+                    <div class="buy">Детальніше</div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="footer__item">
+
+            <a href="./index.html" class="logo__link">UPTONNN</a>
+            <span>ⓒ 2024</span>
+
+        </div>
+        
+    </div>
+
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/cart.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/catalog.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/search-list.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    
+</body>
+</html>

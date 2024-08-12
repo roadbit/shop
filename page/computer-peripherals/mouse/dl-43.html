@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../icon/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../css/simplebar.css">
+    <link rel="stylesheet" href="../../../../page/page.css">
+    <link rel="stylesheet" href="../../../css/animation-line.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>UPTONNN | Купити Бездротова Миша Hoco DI43 Main gaming</title>
+</head>
+<body>
+
+    <div class="main__container">
+        <div class="animationn__line">
+            <div>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+            </div>
+        </div>
+        <div class="nav__panel">
+            <div class="top__panel">
+                <a href="../../../index.html" class="logo__link">UPTONNN</a>
+                <div class="cart__item">
+                    <button class="cart__btn" onclick="toggleSidebar()">
+                        <img src="../../../icon/cart-contents.svg" alt="Cart" class="cart__icon">
+                    </button>
+                    <span class="cart__quantity">0</span>
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <div class="top__bar">
+                        <p class="bar__title">кошик</p>
+                        <button class="close-btn" onclick="closeSidebar()">
+                            <img src="../../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+
+                    <div class="cart__image-item">
+                        <img src="../../../icon/shopping-cart.svg" alt="img" class="cart__img-img">
+                        <p>кошик порожній</p>
+                    </div>
+
+                    <div class="cart__grid">
+                        <div class="contact__item">
+                            <p class="cart__info-text">1. Контактні дані</p>
+                            <form class="contact__form" id="orderForm" method="post">
+                                <input type="text" id="name" name="Ім'я" placeholder="Введіть ім'я"><br>                         
+                                <input type="text" id="surname" name="Прізвище" placeholder="Введіть прізвище"><br>
+                                <input type="tel" id="phone" name="Телефон" placeholder="Ваш телефон"><br>
+
+                                <select class="select__item" id="params" name="Доставка">
+                                    <option value="">Спосіб доставки</option>
+                                    <option value="НоваПоштаВідділення">Нова Пошта відділення</option>
+                                    <option value="Нова Пошта поштомат">Нова Пошта поштомат</option>
+                                    <option value="Нова Пошта доставка кур'єром">Нова Пошта доставка кур'єром</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select><br>
+
+                                <input type="tel" id="region" name="Область" placeholder="Область"><br>
+                                <input type="text" id="city" name="Місто" placeholder="Місто"><br>                         
+                                <input type="text" id="postnumber" name="Номер відділення або індекс" placeholder="Номер відділення або індекс"><br>
+                                <input type="text" id="address" name="Адреса відділення пошти" placeholder="Адреса відділення пошти"><br>
+                            
+                            </form>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart__info">
+                                <p class="cart__info-text">Інформація про замовлення</p>
+                                <p class="cart__info-text_span" >У вашому кошику <span class="cart__count-order">0</span> замовлення:</p>
+                            </div>
+                            <ul class="cart-content__list" data-simplebar></ul>
+                            <div class="cart-content__bottom">
+                                <div class="cart-content__fullprice">
+                                    <p class="full__price-text">Сума замовлення:</p>
+                                    <span class="fullprice">0 грн</span>
+                                </div>
+                                <button class="cart-content__btn" id="submitOrderBtn">Оформити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bottom__panel">
+                <div class="panel__link">
+                    <a href="../../../catalog-page/pc.html" class="catalog">Комп'ютерна переферія</a>
+                    <a href="../../../catalog-page/mouse.html">Бездротові миші</a>
+                </div>
+            </div>
+        </div>
+        <div class="page__container">
+            <div class="inner__page-container">
+                <div class="left">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class="slide"><img class="slide__img" src="../../../image/pc-img/mouse/dl-43/1.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/pc-img/mouse/dl-43/2.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/pc-img/mouse/dl-43/3.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/pc-img/mouse/dl-43/4.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/pc-img/mouse/dl-43/5.png" alt="Slide 1"></div>
+                        </div>
+                        <button class="prevBtn"><img src="../../../icon/left.png"></button>
+                        <button class="nextBtn"><img src="../../../icon/right.png"></button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1 class="page__title">Бездротова Миша Hoco DI43 Main gaming</h1>
+                    <p class="page__price">589 грн</p>
+
+                    <button class="order__btn">Купити</button>
+
+                    <div class="hidden__block">
+                        <p class="descr">
+                            <span class="descr__faat">Опис</span><br><br>
+                            Wireless Миша Hoco DI43 Main gaming - це унікальний аксесуар преміум класу, створений для задоволення потреб геймерів у високій продуктивності та комфорті. Модель привертає увагу незвичайною конструкцією і технологічним, футуристичним дизайном, який відображає її ігрову спрямованість. Її обтічні деталі, що лаконічно поєднуються зі строгими лініями та елегантними вигинами, забезпечать приємні тактильні відчуття та зручний хват. Завдяки невеликій вазі, що дорівнює лише 85 грамам, та ергономічній, симетричній формі її можна використовувати як лівою, так і правою рукою тривалий час без відчуттів дискомфорту в суглобах пальців і зап'ястя. Корпус пристрою якісно зібраний, виготовлений з міцної комбінації алюмінієвого сплаву і ABS пластику. На його нижній панелі розташовані полімерні зносостійкі глайди. Бездротова миша оснащена парою стандартних кнопок, колесом прокрутки, кнопками зміни DPI і ввімкнення. Кнопки виділяються збільшеним ресурсом натискань, що дорівнює 5 мільйонам разів, і під час натискання видають надзвичайно тихий клік. Оптичний сенсор миші може працювати з чутливістю 800, 1200 і 1600DPI. Джерелом живлення для неї служить вбудована батарея ємністю 300mAh, повного заряду якої вистачить приблизно на 30 годин безперервного використання у звичайному режимі. Роз'єм для її зарядки зручно розташований у торці. Бездротове з'єднання миші з комп'ютером або іншим сумісним пристроєм здійснюється на частоті 2.4Ghz за допомогою компактного USB-адаптера, який разом із кабелем для заряджання входить до комплекту.<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Характеристики</span><br><br>
+                            Dpi: 1600<br>
+                            Led підсвічування: Ні<br>
+                            Версія bluetooth: 5.0<br>
+                            Виробник:: Hoco<br>
+                            Кнопки управління: Механічні<br>
+                            Комплектація: Wireless Мышь<br>
+                            Матеріал корпусу: Пластик<br>
+                            Спосіб підключення: Бездротовий<br>
+                            Тип сенсора: Оптичний<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Гарантія</span><br><br>
+                            6 місяців гарантії від виробника<br>
+                            Обмін/повернення замовлення впродовж 14 днів <br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Доставка</span><br><br>
+                            Адресна доставка кур'єром Нова Пошта<br>
+                            Доставка в поштомат Нова Пошта<br>
+                            Доставка у відділення Нова Пошта<br>
+                            Доставка у поштове відділення Укрпошти<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Оплата</span><br><br>
+                            Оплата карткою у відділенні, Оплата під час отримання товару, Google Pay, Apple Pay, Visa, Mastercard
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__item">
+
+            <a href="./index.html" class="logo__link">UPTONNN</a>
+            <span>ⓒ 2024</span>
+
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const prevBtn = document.querySelector(".prevBtn");
+            const nextBtn = document.querySelector(".nextBtn");
+
+            let counter = 0;
+
+            nextBtn.addEventListener("click", function () {
+                if (counter < 4) {
+                counter++;
+                } else {
+                counter = 0;
+                }
+                updateSlider();
+            });
+
+            prevBtn.addEventListener("click", function () {
+                if (counter > 0) {
+                counter--;
+                } else {
+                counter = 4;
+                }
+                updateSlider();
+            });
+
+            function updateSlider() {
+                const translateXValue = -counter * 100 + "%";
+                slider.style.transform = "translateX(" + translateXValue + ")";
+            }
+            });
+
+    </script>
+    
+    
+    <script src="../../../js/simplebar.js"></script>
+    <script src="../../../js/cart.js"></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    
+</body>
+</html>

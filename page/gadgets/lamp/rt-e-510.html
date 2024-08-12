@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../icon/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../css/simplebar.css">
+    <link rel="stylesheet" href="../../../page/page.css">
+    <link rel="stylesheet" href="../../../css/animation-line.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>UPTONNN | Купити Лампа Настільна Remax RT-E510 1200 мАч</title>
+</head>
+<body>
+
+    <div class="main__container">
+        <div class="animationn__line">
+            <div>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+                <h1>Автомобільна тематика</h1>
+                <h1>Автомобільні тримачі</h1>
+                <h1>Зарядні станції</h1>
+                <h1>Мережеві зарядні пристрої</h1>
+                <h1>Бездротові зарядні пристрої</h1>
+                <h1>Шнури USB</h1>
+                <h1>Шнури USB Type-C</h1>
+                <h1>Клавіатури</h1>
+                <h1>Мишки</h1>
+                <h1>Комп'ютерна акустика</h1>
+                <h1>Бездротова акустика</h1>
+                <h1>Блютуз навушники</h1>
+                <h1>Бездротові навушники TWS</h1>
+                <h1>Павер банки</h1>
+                <h1>Штативи</h1>
+                <h1>Адаптери</h1>
+                <h1>Мережеві фільтри</h1>
+            </div>
+        </div>
+        <div class="nav__panel">
+            <div class="top__panel">
+                <a href="../../../index.html" class="logo__link">UPTONNN</a>
+                <div class="cart__item">
+                    <button class="cart__btn" onclick="toggleSidebar()">
+                        <img src="../../../icon/cart-contents.svg" alt="Cart" class="cart__icon">
+                    </button>
+                    <span class="cart__quantity">0</span>
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <div class="top__bar">
+                        <p class="bar__title">кошик</p>
+                        <button class="close-btn" onclick="closeSidebar()">
+                            <img src="../../../icon/close-icon.svg" alt="Close" class="close__icon">
+                        </button>
+                    </div>
+
+                    <div class="cart__image-item">
+                        <img src="../../../icon/shopping-cart.svg" alt="img" class="cart__img-img">
+                        <p>кошик порожній</p>
+                    </div>
+
+                    <div class="cart__grid">
+                        <div class="contact__item">
+                            <p class="cart__info-text">1. Контактні дані</p>
+                            <form class="contact__form" id="orderForm" method="post">
+                                <input type="text" id="name" name="Ім'я" placeholder="Введіть ім'я"><br>                         
+                                <input type="text" id="surname" name="Прізвище" placeholder="Введіть прізвище"><br>
+                                <input type="tel" id="phone" name="Телефон" placeholder="Ваш телефон"><br>
+
+                                <select class="select__item" id="params" name="Доставка">
+                                    <option value="">Спосіб доставки</option>
+                                    <option value="НоваПоштаВідділення">Нова Пошта відділення</option>
+                                    <option value="Нова Пошта поштомат">Нова Пошта поштомат</option>
+                                    <option value="Нова Пошта доставка кур'єром">Нова Пошта доставка кур'єром</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select><br>
+
+                                <input type="tel" id="region" name="Область" placeholder="Область"><br>
+                                <input type="text" id="city" name="Місто" placeholder="Місто"><br>                         
+                                <input type="text" id="postnumber" name="Номер відділення або індекс" placeholder="Номер відділення або індекс"><br>
+                                <input type="text" id="address" name="Адреса відділення пошти" placeholder="Адреса відділення пошти"><br>
+                            
+                            </form>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart__info">
+                                <p class="cart__info-text">Інформація про замовлення</p>
+                                <p class="cart__info-text_span" >У вашому кошику <span class="cart__count-order">0</span> замовлення:</p>
+                            </div>
+                            <ul class="cart-content__list" data-simplebar></ul>
+                            <div class="cart-content__bottom">
+                                <div class="cart-content__fullprice">
+                                    <p class="full__price-text">Сума замовлення:</p>
+                                    <span class="fullprice">0 грн</span>
+                                </div>
+                                <button class="cart-content__btn" id="submitOrderBtn">Оформити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bottom__panel">
+                <div class="panel__link">
+                    <a href="../../../catalog-page/gadgets.html" class="catalog">Гаджети</a>
+                    <a href="../../../catalog-page/lamp.html">Настільні лампи</a>
+                </div>
+            </div>
+        </div>
+        <div class="page__container">
+            <div class="inner__page-container">
+                <div class="left">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class="slide"><img class="slide__img" src="../../../image/lamp-img/rt-e-510/1.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/lamp-img/rt-e-510/2.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/lamp-img/rt-e-510/3.png" alt="Slide 1"></div>
+                            <div class="slide"><img class="slide__img" src="../../../image/lamp-img/rt-e-510/4.png" alt="Slide 1"></div>
+                        </div>
+                        <button class="prevBtn"><img src="../../../icon/left.png"></button>
+                        <button class="nextBtn"><img src="../../../icon/right.png"></button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1 class="page__title">Лампа Настільна Remax RT-E510 1200 мАч</h1>
+                    <p class="page__price">710 грн</p>
+
+                    <button class="order__btn">Купити</button>
+
+                    <div class="hidden__block">
+                        <p class="descr">
+                            <span class="descr__faat">Опис</span><br><br>
+                            Лампа настільна Remax LED lamp RT-E510 - портативна настільна лампа, що забезпечує безпечне для очей яскраве освітлення. Модель реалізована в стильному, елегантному дизайні, який дозволяє їй ідеально вписатися в сучасний інтер'єр будь-якої вітальні, спальні і офісу. Незважаючи на свої невеликі розміри пристрій має достатній радіус розсіювання світла для комфортної роботи вночі, навчання і читання. Пристрій виготовлений з міцного пластику з приємною на дотик поверхнею, його практична конструкція дозволяє компактно скласти лампу і регулювати кут нахилу освітлювального елементу. На відміну від менш якісних ламп, дана модель оснащена світлодіодами, мерехтіння яких не помітно для очей і, навіть, не вловляється фото і відео пристроями. Аксесуар оснащений дисплеєм, що відображає час і дату, сенсорною панеллю для управління, вбудованою батареєю ємністю 1200mAh і роз'ємом Micro-USB. Лампа комплектується інструкцією і кабелем Micro-USB.<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Характеристики</span><br><br>
+                            Led підсвічування: Так<br>
+                            Ємність акумулятора, mah: 1200<br>
+                            Інтерфейс підключення: Micro-usb<br>
+                            Виробник:: Remax<br>
+                            Висота, мм: 275<br>
+                            Глибина, мм: 100<br>
+                            Ширина, мм: 100<br>
+                            Дисплей: Led<br>
+                            Живлення: Мережа, батарея<br>
+                            Кнопки управління: Сенсорні<br>
+                            Колірна температура, К: 3900 - 4200<br>
+                            Комплектація: Лампа, кабель Micro-usb, инструкция<br>
+                            Конструкція: Складова<br>
+                            Матеріал корпусу: Пластик<br>
+                            Наявність сенсорних кнопок : Так<br>
+                            Потужність, Вт: 5<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Гарантія</span><br><br>
+                            6 місяців гарантії від виробника<br>
+                            Обмін/повернення замовлення впродовж 14 днів <br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Доставка</span><br><br>
+                            Адресна доставка кур'єром Нова Пошта<br>
+                            Доставка в поштомат Нова Пошта<br>
+                            Доставка у відділення Нова Пошта<br>
+                            Доставка у поштове відділення Укрпошти<br><br>
+                        </p>
+                        <p class="descr">
+                            <span class="descr__faat">Оплата</span><br><br>
+                            Оплата карткою у відділенні, Оплата під час отримання товару, Google Pay, Apple Pay, Visa, Mastercard
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__item">
+
+            <a href="./index.html" class="logo__link">UPTONNN</a>
+            <span>ⓒ 2024</span>
+
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const prevBtn = document.querySelector(".prevBtn");
+            const nextBtn = document.querySelector(".nextBtn");
+
+            let counter = 0;
+
+            nextBtn.addEventListener("click", function () {
+                if (counter < 3) {
+                counter++;
+                } else {
+                counter = 0;
+                }
+                updateSlider();
+            });
+
+            prevBtn.addEventListener("click", function () {
+                if (counter > 0) {
+                counter--;
+                } else {
+                counter = 3;
+                }
+                updateSlider();
+            });
+
+            function updateSlider() {
+                const translateXValue = -counter * 100 + "%";
+                slider.style.transform = "translateX(" + translateXValue + ")";
+            }
+            });
+
+    </script>
+    
+    
+    <script src="../../../js/simplebar.js"></script>
+    <script src="../../../js/cart.js"></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    
+</body>
+</html>

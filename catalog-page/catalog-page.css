@@ -1,0 +1,109 @@
+.catalog__title {
+    font-family: var(--font-plex);
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 150px;
+    margin-left: 20px;
+}
+.inner__catalog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    margin-top: 80px;
+    border-top: 1px solid #1211135a;
+}
+.cart__catalog {
+    border-right: 1px solid #1211135a;
+    border-bottom: 1px solid #1211135a;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.cart__catalog-all {
+    border-right: 1px solid #1211135a;
+    border-bottom: 1px solid #1211135a;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.all-text {
+    font-family: var(--font-plex);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000;
+}
+
+.cart__catalog-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.title__price-item_cart {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.name__text {
+    font-family: var(--font-plex);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 8px;
+    color: #000;
+}
+.price__text {
+    font-family: var(--font-plex);
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 12px;
+}
+.start__icon {
+    margin-top: 14px;
+}
+.buy {
+    font-family: var(--font-plex);
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 14px;
+}
+
+.catalog__line {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 80px;
+    overflow-x: scroll;
+}
+.catalog__page {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-plex);
+    font-size: 12px;
+    border-right: 1px solid #1211135a;
+}
+.catalog__page:nth-child(1) {
+    border-left: 1px solid #1211135a;
+}
+.catalog__page img {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
